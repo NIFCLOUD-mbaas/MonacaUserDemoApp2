@@ -8,7 +8,7 @@ class: center, middle, inverse
 .right[<img src="document-img/takano.png" alt="takano.png" width="150px">]
 
 .footnote[
-20180313 MonacaUserDemoApp2 (Update 20180725)
+20180313 MonacaUserDemoApp2 (20210412 Update)
 ]
 
 ---
@@ -185,8 +185,8 @@ layout: false
 ### 動作環境準備
 * iOS: OS ver.10.0 ~ ver.13.4
 * 端末: iphone 8 (13.4)
-* Xcode: ver.11.4 
-* MacOS: ver.10.15.4 
+* Xcode: ver.11.4
+* MacOS: ver.10.15.4
 
 ---
 .footnote_right[
@@ -927,19 +927,6 @@ layout: false
  * 使用機能 / データストア,位置情報検索
 * [and more...](https://mbaas.nifcloud.com/doc/current/tutorial/tutorial_monaca.html)
 ]
-
----
-## 本日の資料配布について
-.size_small_9[
-アンケートをご回答いただいた方に資料URLをお送りします。ご協力をお願いします。
-]
-
-### 配布予定資料「アプリに会員認証機能を導入しよう！」
-.size_small_9[
-ニフクラ mobile backendを使うことで、<br>**既存Monacaアプリにも簡単に会員認証機能を導入可能** です！
-]
-
-.center[<img src="document-img/Appimage.png" alt="会員認証機能イメージ" width="400px">]
 
 ---
 layout: true
