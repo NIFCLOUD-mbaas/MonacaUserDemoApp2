@@ -1,7 +1,7 @@
 import TestFilters from '../support/filterTests.js'
 
 TestFilters([], () => {
-    describe('Email/PW認証 - Handling Action Sign up', function () {
+    describe('Email/PW認証 - Handling Action Sign up (mailAddress)', function () {
         var email = ''
         beforeEach(() => {
             cy.viewport('iphone-x')
@@ -17,12 +17,12 @@ TestFilters([], () => {
             cy.get('#toolbar-title').should('have.text', 'Email/PW認証')
         }) 
 
-        it('Handling Action Sign up - Validate empty email', function () {
+        it('Handling Action Sign up (mailAddress) - Validate empty email', function () {
             cy.get('#second-page').find('ons-button').contains('Sign up').click()
             cy.contains('メールアドレスが入力されていません').should('be.visible')
         })
 
-        it('Handling Action Sign up - Sign up successful', function () {
+        it('Handling Action Sign up (mailAddress) - Sign up successful', function () {
             cy.get('#singupEmailAddress').type(email, { delay: 100 }).should('have.value', email)
             cy.get('#second-page').find('ons-button').contains('Sign up').click()
             cy.wait(1000)
@@ -30,7 +30,7 @@ TestFilters([], () => {
         })
     })
 
-    describe('Email/PW認証 - Handling Action Sign in', function () {
+    describe('Email/PW認証 - Handling Action Sign in (mailAddress)', function () {
         var email = 'mail_test@gmail.com'
         var pass = '123456'
         beforeEach(() => {
@@ -41,23 +41,23 @@ TestFilters([], () => {
             cy.wait(1000)
         })
 
-        it('Handling Action Sign in - Validate empty ID', function () {
+        it('Handling Action Sign in (mailAddress) - Validate empty ID', function () {
             cy.get('#singinEmailAddressPW').type(pass, { delay: 100 }).should('have.value', pass)
             cy.get('#second-page').find('ons-button').contains('Sign in').click()
             cy.contains('入力されていない項目があります').should('be.visible')
         })
 
-        it('Handling Action Sign up - Validate empty password', function () {
+        it('Handling Action Sign in (mailAddress) - Validate empty password', function () {
             cy.get('#singinEmailAddress').type(email, { delay: 100 }).should('have.value', email)
             cy.get('#second-page').find('ons-button').contains('Sign in').click()
             cy.contains('入力されていない項目があります').should('be.visible')
         })
 
-        it('Handling Action Sign up - Sign up successful', function () {
+        it('Handling Action Sign in (mailAddress) - Sign in successful', function () {
             cy.get('#singinEmailAddress').type(email, { delay: 100 }).should('have.value', email)
             cy.get('#singinEmailAddressPW').type(pass, { delay: 100 }).should('have.value', pass)
             cy.get('#second-page').find('ons-button').contains('Sign in').click()
-            cy.wait(1000)
+            cy.wait(5000)
             cy.contains('【Email/PW認証】ログイン成功:').should('be.visible')
         })
     })

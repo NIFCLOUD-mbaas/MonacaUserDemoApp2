@@ -13,10 +13,5 @@ TestFilters([], () => {
         it('Email/PW認証 screen', function () {
             cy.get('#toolbar-title').should('have.text', '匿名認証')
         }) 
-
-        it('Handling Action Sign in - Validate empty email', function () {
-            cy.get('#third-page').find('ons-button').contains('Sign in').click()
-            cy.contains('【匿名認証】ログイン成功:').should('be.visible')
-        })
     })
 })
