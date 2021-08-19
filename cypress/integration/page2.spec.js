@@ -31,7 +31,7 @@ TestFilters([], () => {
     })
 
     describe('Email/PW認証 - Handling Action Sign in (mailAddress)', function () {
-        var email = 'mail_test@gmail.com'
+        var email = 'test@gmail.com'
         var pass = '123456'
         beforeEach(() => {
             cy.viewport('iphone-x')
