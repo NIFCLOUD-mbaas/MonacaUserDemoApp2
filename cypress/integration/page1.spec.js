@@ -8,7 +8,7 @@ TestFilters([], () => {
             cy.viewport('iphone-x')
             cy.visit('http://localhost:8080')
 
-            userName = generate_random_string(8)
+            userName = generate_random_string(15)
         })
     
         it('ID/PW認証 screen', function () {

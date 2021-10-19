@@ -6,7 +6,7 @@ TestFilters([], () => {
         beforeEach(() => {
             cy.viewport('iphone-x')
             cy.visit('http://localhost:8080')
-            email = generate_random_string(8) + '@gmail.com'
+            email = generate_random_string(15) + '@gmail.com'
 
             cy.wait(1000)
             cy.get('ons-tab[label="Email/PW"]').click()
