@@ -66,6 +66,7 @@
         <string>en</string>
       </array>
     </config-file>
+    <icon src="/res/ios/icon/icon-20.png" width="20" height="20"/>
   </platform>
   <platform name="android">
     <icon src="/res/android/icon/ldpi.png" density="ldpi"/>
